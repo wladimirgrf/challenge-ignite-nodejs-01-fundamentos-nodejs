@@ -7,7 +7,7 @@ export const createTask = (req, res) => {
   if (!title || !description) {
     return res.writeHead(400).end(JSON.stringify({
       message: "Missing parameters!"
-    }))
+    }));
   }
 
   const task = {
