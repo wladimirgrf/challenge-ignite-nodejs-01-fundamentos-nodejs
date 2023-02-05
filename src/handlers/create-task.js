@@ -10,7 +10,7 @@ export const createTask = (req, res) => {
     }))
   }
 
-  const tasks = {
+  const task = {
     id: randomUUID(),
     title,
     description,
@@ -19,7 +19,7 @@ export const createTask = (req, res) => {
     updated_at: new Date()
   }
 
-  database.insert('tasks', tasks)
+  database.insert('tasks', task)
 
   return res.writeHead(201).end()
 }
